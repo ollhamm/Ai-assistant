@@ -15,7 +15,6 @@ export default function Home() {
     },
   ]);
 
-  const [input, setInput] = useState("");
   
   const handleNewMessage = async (message: string) => {
     try {

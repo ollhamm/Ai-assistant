@@ -19,13 +19,6 @@ const ChatMessages = () => {
     },
   ];
 
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
-    });
-  };
 
   return (
     <div className="w-full max-w-4xl mx-auto h-[calc(100vh-180px)]">
@@ -33,6 +26,7 @@ const ChatMessages = () => {
         <div className="space-y-4 py-4">
           {messages.map((message) => (
             <div
+              key={message.content}
               className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div

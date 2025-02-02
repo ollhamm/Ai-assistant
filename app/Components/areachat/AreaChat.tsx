@@ -9,10 +9,10 @@ const AreaChat: React.FC<AreaChatProps> = ({ messages }) => {
   return (
     <div className="w-full max-w-4xl mx-auto h-[calc(100vh-180px)] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       <div className="space-y-4 py-4 px-4">
-        {messages.map((message, index) => (
+        {messages.map((message) => (
           <div
-          key={index}
-            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+            key={message.content}
+          className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
               className={`flex gap-3 max-w-[80%] ${

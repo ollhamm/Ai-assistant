@@ -1,18 +1,10 @@
-"use client";
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Menu, X, User } from 'lucide-react';
 import { NavbarProps } from '../types/navbar';
 
 const Navbar: React.FC<NavbarProps> = ({ 
   logo = "Your Logo", 
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <nav className="bg-white w-full fixed shadow-md">
